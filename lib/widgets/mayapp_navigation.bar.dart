@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:marketlab_app/screens/app_search.dart';
+import 'package:marketlab_app/screens/home.dart';
 
 class MyAppNavigationBar extends StatefulWidget {
   @override
@@ -22,17 +24,18 @@ class _MyHomePageState extends State<MyAppNavigationBar> {
         selectedItemColor: Colors.blueAccent,
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            // icon: IconButton(
-            //   icon: Icon(Icons.home),
-            //   onPressed: () => null,
-            // ),
-            icon: Icon(Icons.home),
+            icon: IconButton(
+              icon: Icon(Icons.home),
+              onPressed: () => Navigator.of(context).pushReplacement(
+                  MaterialPageRoute(builder: (context) => Home())),
+            ),
             title: SizedBox(height: 0),
           ),
           BottomNavigationBarItem(
             icon: IconButton(
               icon: Icon(Icons.search),
-              onPressed: () => null,
+              onPressed: () => Navigator.of(context).pushReplacement(
+                  MaterialPageRoute(builder: (context) => AppSearch())),
             ),
             title: SizedBox(height: 0),
           ),

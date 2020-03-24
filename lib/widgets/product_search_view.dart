@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:marketlab_app/models/product.dart';
+import 'package:marketlab_app/screens/home.dart';
 import 'package:marketlab_app/ui_kit/constants/app_boxshadow.dart';
+import 'package:marketlab_app/ui_kit/imagekit/product_list_image.dart';
+import 'package:marketlab_app/ui_kit/titles/product_search_pricing.dart';
+import 'package:marketlab_app/ui_kit/titles/product_supermarketing.dart';
+import 'package:marketlab_app/ui_kit/titles/product_title.dart';
 
 class ProductSearchView extends StatelessWidget {
   final Product model;
@@ -12,20 +17,39 @@ class ProductSearchView extends StatelessWidget {
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.all(
-          Radius.circular(4),
+          Radius.circular(8),
         ),
         boxShadow: [AppBoxShadow().defaulBoxShadow()],
       ),
       child: ListTile(
-        // contentPadding: EdgeInsets.all(5),
-        leading: Image.network(
-          "https://reimg-carrefour.mncdn.com/mnresize/600/600/productimage/30239883/30239883_0_MC/8812216811570_1556175751113.jpg",
+        leading: ProductListImage(),
+        title: Container(
+          margin: const EdgeInsets.symmetric(vertical: 8.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              ProductTitle(),
+              ProductSearchPricing(),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: <Widget>[
+                  Padding(
+                    padding: const EdgeInsets.only(right: 4),
+                    child: ProductSuperMarketing(),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(right: 4),
+                    child: ProductSuperMarketing(),
+                  ),
+                ],
+              ),
+            ],
+          ),
         ),
-        title: Container(child: Text(model.name)),
-        isThreeLine: true,
-        subtitle: Text(model.price.toString()),
         onTap: () {
-          // Navigator.of(context).push(MaterialPageRoute(builder: (context) => Detail()));
+          Navigator.of(context)
+              .pushReplacement(MaterialPageRoute(builder: (context) => Home()));
         },
       ),
     );

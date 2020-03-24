@@ -17,7 +17,6 @@ class AppSearch extends StatelessWidget {
             padding: EdgeInsets.only(left: 10, right: 10, top: 0, bottom: 0),
           ),
           searchBarPadding: EdgeInsets.symmetric(horizontal: 15),
-          listPadding: EdgeInsets.symmetric(horizontal: 15),
           hintText: "Bir ürün adı girin...",
           hintStyle: TextStyle(fontSize: 14),
           onSearch: new StaticData().search,
@@ -28,6 +27,12 @@ class AppSearch extends StatelessWidget {
           onCancelled: () {
             print("Cancelled triggered");
           },
+          buildSuggestion: (Product product, int index) {
+            return Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 15),
+              child: ProductSearchView(),
+            );
+          },
           suggestions: [
             Product(id: 1, name: "fdsfsdfs", price: 2.9),
             Product(id: 1, name: "fdsfsdfs", price: 2.9)
@@ -35,7 +40,10 @@ class AppSearch extends StatelessWidget {
           mainAxisSpacing: 10,
           crossAxisCount: 1,
           onItemFound: (Product product, int index) {
-            return ProductSearchView(model: product);
+            return Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 15),
+              child: ProductSearchView(),
+            );
           },
         ),
       ),

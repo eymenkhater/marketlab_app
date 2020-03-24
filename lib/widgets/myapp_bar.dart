@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:marketlab_app/ui_kit/forms/app_text_form_fields.dart';
+import 'package:marketlab_app/ui_kit/fonts/app_font_weight.dart';
 
 class MyAppBar extends StatelessWidget {
   @override
@@ -20,9 +20,12 @@ class MyAppBar extends StatelessWidget {
               left: 15,
               right: 15,
             ),
-            child: DefaultTextFormField(
-              placeHolder: "Bir ürün adı girin..",
-              keyboardType: TextInputType.text,
+            child: Text(
+              "MarketLab App",
+              style: TextStyle(
+                fontSize: 18,
+                fontWeight: AppFontWeight.bold,
+              ),
             ),
           ),
         ],

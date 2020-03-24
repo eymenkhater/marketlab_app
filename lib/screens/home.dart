@@ -42,33 +42,3 @@ class HomeState extends State<Home> {
     );
   }
 }
-// class Home extends StatelessWidget {
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       appBar: PreferredSize(
-//         preferredSize: Size(double.infinity, 100),
-//         child: MyAppBar(),
-//       ),
-//       body: SafeArea(
-//         child: Container(
-//           child: ListView(
-//             children: <Widget>[
-//               SizedBox(height: 15),
-//               SliderGridView(),
-//               SizedBox(height: 15),
-//               AreaTitle(title: "Kategoriler"),
-//               SizedBox(height: 10),
-//               CategoryGridView(),
-//               SizedBox(height: 20),
-//               AreaTitle(title: "Fırsat Ürünleri"),
-//               SizedBox(height: 10),
-//               ProductListGridView()
-//             ],
-//           ),
-//         ),
-//       ),
-//       bottomNavigationBar: MyAppNavigationBar(),
-//     );
-//   }
-// }

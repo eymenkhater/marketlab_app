@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:marketlab_app/models/homeslider.dart';
 import 'package:marketlab_app/ui_kit/constants/app_colors.dart';
+import 'package:marketlab_app/ui_kit/fonts/app_font_weight.dart';
 
 class SliderCard extends StatelessWidget {
   final HomeSlider model;
@@ -23,7 +24,7 @@ class SliderCard extends StatelessWidget {
               model.title,
               style: TextStyle(
                 color: Colors.white,
-                fontWeight: FontWeight.bold,
+                fontWeight: AppFontWeight.bold,
                 fontSize: 14,
               ),
               textAlign: TextAlign.center,

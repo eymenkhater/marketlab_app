@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:marketlab_app/models/product.dart';
 import 'package:marketlab_app/ui_kit/buttons/app_button.dart';
 import 'package:marketlab_app/ui_kit/constants/app_boxshadow.dart';
 import 'package:marketlab_app/ui_kit/imagekit/product_list_image.dart';
 import 'package:marketlab_app/ui_kit/titles/product_pricing.dart';
 import 'package:marketlab_app/ui_kit/titles/product_supermarketing.dart';
-import 'package:marketlab_app/ui_kit/titles/product_titling.dart';
+import 'package:marketlab_app/ui_kit/titles/product_title.dart';
 
 class ProductCard extends StatelessWidget {
+  final Product model;
+  ProductCard({Key key, this.model}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -22,12 +25,13 @@ class ProductCard extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  ProductTitling(),
+                  ProductTitle(),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: <Widget>[
                       ProductPricing(),
+                      SizedBox(width: 10),
                       ProductSuperMarketing(),
                     ],
                   ),
