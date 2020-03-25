@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:marketlab_app/models/product.dart';
-import 'package:marketlab_app/screens/product_market.dart';
 import 'package:marketlab_app/ui_kit/constants/app_boxdecoration.dart';
 import 'package:marketlab_app/ui_kit/imagekit/product_list_image.dart';
 import 'package:marketlab_app/ui_kit/titles/product_price.dart';
@@ -13,6 +12,7 @@ class ProductCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      padding: EdgeInsets.symmetric(vertical: 10),
       decoration: AppBoxDecoration().defaultCardDecoration,
       child: ListTile(
         leading: ProductListImage(),
@@ -34,11 +34,7 @@ class ProductCard extends StatelessWidget {
             ],
           ),
         ),
-        trailing: IconButton(icon: Icon(Icons.add_circle), onPressed: () {}),
-        onTap: () {
-          Navigator.of(context)
-              .push(MaterialPageRoute(builder: (context) => ProductMarket()));
-        },
+        onTap: () {},
       ),
     );
   }

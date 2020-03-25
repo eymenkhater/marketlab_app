@@ -7,7 +7,10 @@ class ProductPrice extends StatelessWidget {
     return Container(
       child: Text(
         "23,80 TL",
-        style: TextStyle(fontSize: 12, fontWeight: AppFontWeight.medium),
+        style: TextStyle(
+          fontSize: 14,
+          fontWeight: AppFontWeight.bold,
+        ),
       ),
     );
   }

@@ -5,8 +5,8 @@ class AppBoxShadow {
   BoxShadow defaulBoxShadow() {
     return BoxShadow(
       color: AppColors.boxBgPanda,
-      offset: new Offset(1, 1.0),
-      blurRadius: 1.0,
+      offset: new Offset(1.0, 1.0),
+      blurRadius: 3.0,
     );
   }
 }

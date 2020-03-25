@@ -7,7 +7,7 @@ class ProductTitle extends StatelessWidget {
     return Container(
       child: Text(
         "Blueberry Yaban Mersini 125",
-        style: TextStyle(fontWeight: AppFontWeight.medium, fontSize: 14),
+        style: TextStyle(fontWeight: AppFontWeight.medium, fontSize: 16),
       ),
     );
   }

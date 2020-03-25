@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:marketlab_app/models/product.dart';
-import 'package:marketlab_app/screens/product_market.dart';
-import 'package:marketlab_app/ui_kit/cards/supermarket_card.dart';
 import 'package:marketlab_app/ui_kit/constants/app_boxdecoration.dart';
 import 'package:marketlab_app/ui_kit/imagekit/product_list_image.dart';
 import 'package:marketlab_app/ui_kit/titles/product_price_rich.dart';
@@ -19,8 +17,8 @@ class ProductSearchView extends StatelessWidget {
       child: ListTile(
         leading: ProductListImage(),
         title: Container(
-          height: 80,
-          padding: EdgeInsets.symmetric(vertical: 10),
+          // height: 80,
+          padding: EdgeInsets.symmetric(vertical: 15),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -62,7 +60,7 @@ class ProductSearchView extends StatelessWidget {
             children: <Widget>[
               Padding(
                 padding: const EdgeInsets.only(bottom: 10),
-                child: SuperMarketCard(),
+                // child: SuperMarketCard(),
               ),
             ],
           );

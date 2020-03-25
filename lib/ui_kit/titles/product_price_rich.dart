@@ -12,6 +12,7 @@ class ProductPriceRich extends StatelessWidget {
           style: TextStyle(
             fontSize: 12,
             fontWeight: AppFontWeight.bold,
+            fontFamily: 'Poppins',
             color: Colors.black,
           ),
           // style: DefaultTextStyle.of(context).style,
@@ -20,6 +21,7 @@ class ProductPriceRich extends StatelessWidget {
               text: " 'den başlayan fiyat",
               style: TextStyle(
                   fontSize: 11,
+                  fontFamily: 'Poppins',
                   fontWeight: AppFontWeight.medium,
                   color: Colors.grey),
             ),
