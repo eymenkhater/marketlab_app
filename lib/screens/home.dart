@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:marketlab_app/widgets/area_title.dart';
 import 'package:marketlab_app/widgets/category_gridview.dart';
 import 'package:marketlab_app/widgets/mayapp_navigation.bar.dart';
+import 'package:marketlab_app/widgets/my_scaffold.dart';
 import 'package:marketlab_app/widgets/myapp_bar.dart';
 import 'package:marketlab_app/widgets/productlist_gridview.dart';
 import 'package:marketlab_app/widgets/slider_gridview.dart';
@@ -15,11 +16,8 @@ class HomeState extends State<Home> {
   int bottomNavIndex = 0;
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: PreferredSize(
-        preferredSize: Size(double.infinity, 100),
-        child: MyAppBar(),
-      ),
+    return MyScaffold(
+      appBar: MyAppBar(),
       body: SafeArea(
         child: Container(
           child: ListView(

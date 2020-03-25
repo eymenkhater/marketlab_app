@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:marketlab_app/models/product.dart';
 import 'package:marketlab_app/screens/product_market.dart';
+import 'package:marketlab_app/ui_kit/cards/supermarket_card.dart';
 import 'package:marketlab_app/ui_kit/constants/app_boxdecoration.dart';
 import 'package:marketlab_app/ui_kit/imagekit/product_list_image.dart';
 import 'package:marketlab_app/ui_kit/titles/product_price_rich.dart';
@@ -45,10 +46,26 @@ class ProductSearchView extends StatelessWidget {
           ),
         ),
         onTap: () {
-          Navigator.of(context)
-              .push(MaterialPageRoute(builder: (context) => ProductMarket()));
+          _onTapShowBottomModal(context);
+          // Navigator.of(context)
+          //     .push(MaterialPageRoute(builder: (context) => ProductMarket()));
         },
       ),
     );
+  }
+
+  void _onTapShowBottomModal(BuildContext context) {
+    showModalBottomSheet(
+        context: context,
+        builder: (context) {
+          return ListView(
+            children: <Widget>[
+              Padding(
+                padding: const EdgeInsets.only(bottom: 10),
+                child: SuperMarketCard(),
+              ),
+            ],
+          );
+        });
   }
 }

@@ -5,9 +5,10 @@ class SuperMarketImage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       child: ClipRRect(
-        borderRadius: BorderRadius.circular(8.0),
+        // borderRadius: BorderRadius.circular(8.0),
         child: Image.network(
-          "https://pngimage.net/wp-content/uploads/2018/06/logo-migros-png-1.png",
+          "https://logos-download.com/wp-content/uploads/2016/09/Migros_logo.png",
+          height: 25,
         ),
       ),
     );

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:marketlab_app/extensions/hexcolor_extension.dart';
 import 'package:marketlab_app/screens/app_search.dart';
 import 'package:marketlab_app/screens/home.dart';
+import 'package:marketlab_app/ui_kit/constants/app_colors.dart';
 
 class MyAppNavigationBar extends StatefulWidget {
   @override
@@ -19,7 +21,7 @@ class _MyHomePageState extends State<MyAppNavigationBar> {
           _currentIndex = index;
           print(index);
         }),
-        backgroundColor: Colors.white,
+        backgroundColor: AppColors.greyAppBg,
         type: BottomNavigationBarType.fixed,
         selectedItemColor: Colors.blueAccent,
         items: <BottomNavigationBarItem>[
