@@ -31,7 +31,7 @@ class HomeState extends State<Home> {
               SizedBox(height: 10),
               CategoryGridView(),
               SizedBox(height: 20),
-              AreaTitle(title: "Fırsat Ürünleri"),
+              AreaTitle(title: "Günün Ürünleri"),
               SizedBox(height: 10),
               ProductListGridView()
             ],

@@ -10,7 +10,7 @@ class App extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.green,
-        fontFamily: 'OpenSans',
+        fontFamily: 'Poppins',
       ),
       home: Home(),
     );

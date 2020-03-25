@@ -10,10 +10,30 @@ class ProductListGridView extends StatelessWidget {
         padding: const EdgeInsets.only(left: 15.0, right: 15.0),
         child: Column(
           children: <Widget>[
-            ProductCard(),
-            ProductCard(),
-            ProductCard(),
-            ProductCard(),
+            Padding(
+              padding: const EdgeInsets.only(bottom: 10.0),
+              child: ProductCard(),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(bottom: 10.0),
+              child: ProductCard(),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(bottom: 10.0),
+              child: ProductCard(),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(bottom: 10.0),
+              child: ProductCard(),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(bottom: 10.0),
+              child: ProductCard(),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(bottom: 10.0),
+              child: ProductCard(),
+            ),
           ],
         ),
       ),

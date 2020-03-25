@@ -16,7 +16,9 @@ class StaticData {
   ];
 
   static List<HomeSlider> homeSliderList = [
-    HomeSlider(id: 1, title: "Pastavilla Kuskus Makarna 500 G"),
+    HomeSlider(
+        id: 1,
+        title: "Pastavilla Kuskus Makarna 500 G Pastavilla Kuskus Makarna"),
     HomeSlider(id: 1, title: "Arbella Tel Şehriye 500 G"),
     HomeSlider(id: 1, title: "Billur Tuz İyotlu Sofra Tuzu 500 G ( Tuzluklu )"),
     HomeSlider(id: 1, title: "Arifoğlu Garam Masala Baharat 45 G"),
