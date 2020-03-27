@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:marketlab_app/models/product.dart';
 import 'package:marketlab_app/ui_kit/constants/app_boxdecoration.dart';
-import 'package:marketlab_app/ui_kit/imagekit/product_list_image.dart';
+import 'package:marketlab_app/ui_kit/imagekit/product_image.dart';
 import 'package:marketlab_app/ui_kit/titles/product_price_rich.dart';
 import 'package:marketlab_app/ui_kit/titles/product_supermarket_icon.dart';
 import 'package:marketlab_app/ui_kit/titles/product_title.dart';
+import 'package:marketlab_app/widgets/modals/product_markets_modal.dart';
 
 class ProductSearchView extends StatelessWidget {
   final Product model;
@@ -15,7 +16,7 @@ class ProductSearchView extends StatelessWidget {
     return Container(
       decoration: AppBoxDecoration().defaultCardDecoration,
       child: ListTile(
-        leading: ProductListImage(),
+        leading: ProductImage(),
         title: Container(
           // height: 80,
           padding: EdgeInsets.symmetric(vertical: 15),
@@ -44,26 +45,16 @@ class ProductSearchView extends StatelessWidget {
           ),
         ),
         onTap: () {
-          _onTapShowBottomModal(context);
+          showModalBottomSheet(
+              backgroundColor: Colors.transparent,
+              context: context,
+              builder: (context) {
+                return ProductMarketsModal();
+              });
           // Navigator.of(context)
           //     .push(MaterialPageRoute(builder: (context) => ProductMarket()));
         },
       ),
     );
-  }
-
-  void _onTapShowBottomModal(BuildContext context) {
-    showModalBottomSheet(
-        context: context,
-        builder: (context) {
-          return ListView(
-            children: <Widget>[
-              Padding(
-                padding: const EdgeInsets.only(bottom: 10),
-                // child: SuperMarketCard(),
-              ),
-            ],
-          );
-        });
   }
 }

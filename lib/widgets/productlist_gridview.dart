@@ -7,7 +7,7 @@ class ProductListGridView extends StatelessWidget {
     return Container(
       width: MediaQuery.of(context).size.width,
       child: Padding(
-        padding: const EdgeInsets.only(left: 15.0, right: 15.0),
+        padding: const EdgeInsets.symmetric(horizontal: 15.0),
         child: Column(
           children: <Widget>[
             Padding(

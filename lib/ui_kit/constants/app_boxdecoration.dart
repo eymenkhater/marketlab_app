@@ -9,4 +9,12 @@ class AppBoxDecoration {
     ),
     boxShadow: [AppBoxShadow().defaulBoxShadow()],
   );
+  Decoration defaultModalDecoration(Color color) => BoxDecoration(
+        color: color,
+        borderRadius: BorderRadius.only(
+          topLeft: const Radius.circular(36),
+          topRight: const Radius.circular(36),
+        ),
+        boxShadow: [AppBoxShadow().defaulBoxShadow()],
+      );
 }

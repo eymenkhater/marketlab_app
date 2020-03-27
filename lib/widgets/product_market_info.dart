@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:marketlab_app/ui_kit/constants/app_boxdecoration.dart';
-import 'package:marketlab_app/ui_kit/imagekit/product_list_image.dart';
+import 'package:marketlab_app/ui_kit/imagekit/product_image.dart';
 
 class ProductMarketInfo extends StatelessWidget {
   @override
@@ -13,7 +12,7 @@ class ProductMarketInfo extends StatelessWidget {
           children: <Widget>[
             Container(
               width: MediaQuery.of(context).size.width / 2.5,
-              child: ProductListImage(),
+              child: ProductImage(),
             ),
             SizedBox(width: 5),
           ],

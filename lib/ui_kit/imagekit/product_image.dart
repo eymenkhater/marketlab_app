@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class ProductListImage extends StatelessWidget {
+class ProductImage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(

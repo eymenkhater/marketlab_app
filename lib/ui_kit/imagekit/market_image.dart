@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class SuperMarketImage extends StatelessWidget {
+class MarketImage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -8,7 +8,7 @@ class SuperMarketImage extends StatelessWidget {
         // borderRadius: BorderRadius.circular(8.0),
         child: Image.network(
           "https://logos-download.com/wp-content/uploads/2016/09/Migros_logo.png",
-          height: 25,
+          height: 20,
         ),
       ),
     );

@@ -7,4 +7,5 @@ class AppColors implements Colors {
   static const greyAppText = Color.fromRGBO(158, 158, 158, 1);
   static const boxBgPanda = Color.fromRGBO(224, 224, 224, 1.0);
   static const greyAppBg = Color.fromRGBO(250, 250, 250, 1);
+  static const blueAppButton = Color.fromRGBO(30, 136, 229, 1);
 }
