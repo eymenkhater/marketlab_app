@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:marketlab_app/ui_kit/fonts/app_font_weight.dart';
 
 class MarketPrice extends StatelessWidget {
+  final double _marketPrice;
+  MarketPrice(this._marketPrice);
   @override
   Widget build(BuildContext context) {
     return Container(

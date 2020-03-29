@@ -4,6 +4,7 @@ import 'package:marketlab_app/ui_kit/cards/product_card.dart';
 class ProductListGridView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    print("fdsfdsf");
     return Container(
       width: MediaQuery.of(context).size.width,
       child: Padding(

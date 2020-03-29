@@ -1,5 +1,6 @@
 import 'package:marketlab_app/models/category.dart';
 import 'package:marketlab_app/models/homeslider.dart';
+import 'package:marketlab_app/models/market.dart';
 import 'package:marketlab_app/models/product.dart';
 
 class StaticData {
@@ -34,6 +35,18 @@ class StaticData {
     await Future.delayed(Duration(seconds: 2));
     return List.generate(search.length, (int index) {
       return Product(id: 1, name: "Product Title", price: 15.0);
+    });
+  }
+
+  static Future<List<Market>> fetchMarketsByProductId() async {
+    await Future.delayed(Duration(seconds: 2));
+    return List.generate(5, (int index) {
+      return Market(
+          id: 1,
+          name: "Migros",
+          imageUrl:
+              "https://logos-download.com/wp-content/uploads/2016/09/Migros_logo.png",
+          price: 29.90);
     });
   }
 }

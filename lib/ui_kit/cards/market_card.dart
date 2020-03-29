@@ -6,14 +6,17 @@ import 'package:marketlab_app/ui_kit/titles/market_price.dart';
 import 'package:marketlab_app/widgets/basket_input_widget.dart';
 
 class MarketCard extends StatelessWidget {
+  final String imageUrl;
+  final double marketPrice;
+  MarketCard({this.imageUrl, this.marketPrice});
   @override
   Widget build(BuildContext context) {
     return Container(
       decoration: AppBoxDecoration().defaultCardDecoration,
       child: ListTile(
-        leading: MarketImage(),
+        leading: MarketImage(imageUrl),
         title: Container(
-          child: MarketPrice(),
+          child: MarketPrice(marketPrice),
         ),
         trailing: TextFieldCounter(),
       ),

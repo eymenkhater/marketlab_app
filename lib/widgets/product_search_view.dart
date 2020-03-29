@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:marketlab_app/blocs/market/bloc/market_bloc.dart';
 import 'package:marketlab_app/models/product.dart';
 import 'package:marketlab_app/ui_kit/constants/app_boxdecoration.dart';
 import 'package:marketlab_app/ui_kit/imagekit/product_image.dart';
@@ -13,6 +15,7 @@ class ProductSearchView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final _marketBloc = context.bloc<MarketBloc>();
     return Container(
       decoration: AppBoxDecoration().defaultCardDecoration,
       child: ListTile(
@@ -45,14 +48,18 @@ class ProductSearchView extends StatelessWidget {
           ),
         ),
         onTap: () {
+          _marketBloc.add(FetchMarketEventByProductId(productId: 1));
           showModalBottomSheet(
-              backgroundColor: Colors.transparent,
-              context: context,
-              builder: (context) {
-                return ProductMarketsModal();
-              });
-          // Navigator.of(context)
-          //     .push(MaterialPageRoute(builder: (context) => ProductMarket()));
+            backgroundColor: Colors.transparent,
+            context: context,
+            builder: (context) {
+              //REFACTOR: https://flutterigniter.com/future-async-called-multiple-times/
+              return BlocProvider.value(
+                value: _marketBloc,
+                child: ProductMarketsModal(),
+              );
+            },
+          );
         },
       ),
     );
