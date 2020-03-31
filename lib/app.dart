@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:marketlab_app/screens/home.dart';
+import 'package:marketlab_app/ui/screens/home_screen.dart';
 
 class App extends StatelessWidget {
   @override
@@ -12,7 +12,7 @@ class App extends StatelessWidget {
         primarySwatch: Colors.grey,
         fontFamily: 'Poppins',
       ),
-      home: Home(),
+      home: HomeScreen(),
     );
   }
 }
