@@ -1,3 +1,6 @@
+import 'dart:async';
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:marketlab_app/src/blocs/home_sliders/bloc/home_slider_bloc.dart';
@@ -23,30 +26,45 @@ class HomeScreen extends StatelessWidget {
     return MyScaffold(
       appBar: MyAppBar(),
       body: SafeArea(
-        child: Container(
-          child: ListView(
-            children: <Widget>[
-              SizedBox(height: 15),
-              BlocProvider(
-                create: (context) => _homeSliderBloc,
-                child: HomeSliderPartial(),
-              ),
-              SizedBox(height: 15),
-              DefaultTopic("Kategoriler"),
-              SizedBox(height: 10),
-              MainCategoryPartial(),
-              SizedBox(height: 20),
-              DefaultTopic("Günün Ürünleri"),
-              SizedBox(height: 10),
-              BlocProvider(
-                create: (context) => _featuredProducts,
-                child: FeaturedProductsPartial(),
-              ),
-            ],
+        child: RefreshIndicator(
+          onRefresh: () => _refresh(),
+          child: Container(
+            child: ListView(
+              children: <Widget>[
+                SizedBox(height: 15),
+                BlocProvider(
+                  create: (context) => _homeSliderBloc,
+                  child: HomeSliderPartial(),
+                ),
+                SizedBox(height: 15),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 15),
+                  child: DefaultTopic("Kategoriler"),
+                ),
+                SizedBox(height: 10),
+                MainCategoryPartial(),
+                SizedBox(height: 20),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 15),
+                  child: DefaultTopic("Günün Ürünleri"),
+                ),
+                SizedBox(height: 10),
+                BlocProvider(
+                  create: (context) => _featuredProducts,
+                  child: FeaturedProductsPartial(),
+                ),
+              ],
+            ),
           ),
         ),
       ),
       bottomNavigationBar: MyAppNavigationBar(),
     );
+  }
+
+  Future<void> _refresh() async {
+    await Future.delayed(Duration(seconds: 1));
+    _homeSliderBloc.add(FetchHomeSliderEvent());
+    _featuredProducts.add(FetchFeaturedProductsEvent());
   }
 }

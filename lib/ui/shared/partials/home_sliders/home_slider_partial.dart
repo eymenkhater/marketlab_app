@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:marketlab_app/src/blocs/home_sliders/bloc/home_slider_bloc.dart';
 import 'package:marketlab_app/ui/widgets/cards/slider_card_widget.dart';
+import 'package:marketlab_app/ui/widgets/loaders/lazy_load_widget.dart';
 
 class HomeSliderPartial extends StatelessWidget {
   @override
@@ -16,9 +17,9 @@ class HomeSliderPartial extends StatelessWidget {
             children: state.homeSliders.map((slider) => SliderCardWidget(imagePath: slider.imageUrl)).toList(),
           ),
         );
-      } else {
-        return Container();
       }
+
+      return Container(height: 200, child: LazyLoadWidget());
     });
   }
 }

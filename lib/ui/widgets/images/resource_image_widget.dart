@@ -8,8 +8,10 @@ class ResourceImageWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       child: ClipRRect(
-        // borderRadius: BorderRadius.circular(8.0),
-        child: Image.network("${API_URL.BASE_IMAGE_URL + _imagePath}", height: 20),
+        child: Image.network(
+          "${API_URL.BASE_IMAGE_URL + _imagePath}",
+          height: 8,
+        ),
       ),
     );
   }

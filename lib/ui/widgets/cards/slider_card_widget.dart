@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:marketlab_app/ui/shared/constants/app_colors.dart';
 
 class SliderCardWidget extends StatelessWidget {
   final String imagePath;
@@ -14,7 +13,6 @@ class SliderCardWidget extends StatelessWidget {
             image: NetworkImage(imagePath),
             fit: BoxFit.cover,
           ),
-          color: AppColors.green,
           borderRadius: BorderRadius.all(
             Radius.circular(8),
           ),

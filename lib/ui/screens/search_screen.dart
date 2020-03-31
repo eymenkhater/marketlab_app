@@ -34,7 +34,7 @@ class SearchScreen extends StatelessWidget {
           onItemFound: (SearchProductResponse product, int index) {
             return Padding(
               padding: const EdgeInsets.symmetric(horizontal: 15),
-              child: ProductSearchPartial(),
+              child: ProductSearchPartial(model: product),
             );
           },
         ),

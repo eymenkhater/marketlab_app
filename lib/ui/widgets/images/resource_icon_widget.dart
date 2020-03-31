@@ -8,7 +8,11 @@ class ResourceIconWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       child: ClipRRect(
-        child: Image.network(API_URL.BASE_IMAGE_URL + _imageUrl, height: 7),
+        child: Image.network(
+          API_URL.BASE_IMAGE_URL + _imageUrl,
+          height: 8,
+          fit: BoxFit.cover,
+        ),
       ),
     );
   }
