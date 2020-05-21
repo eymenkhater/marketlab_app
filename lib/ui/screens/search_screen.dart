@@ -6,6 +6,7 @@ import 'package:marketlab_app/src/blocs/products/search_products/dto/search_prod
 import 'package:marketlab_app/src/data/repositories/product_repository.dart';
 import 'package:marketlab_app/ui/shared/main/mayapp_navigation.bar.dart';
 import 'package:marketlab_app/ui/shared/partials/products/product_search_partial.dart';
+import 'package:marketlab_app/ui/widgets/topics/default_topic.dart';
 
 class SearchScreen extends StatelessWidget {
   final _productRepository = serviceProvider<ProductRepository>();
@@ -16,16 +17,16 @@ class SearchScreen extends StatelessWidget {
         child: SearchBar<SearchProductResponse>(
           icon: null,
           searchBarStyle: SearchBarStyle(
-            padding: EdgeInsets.only(left: 10, right: 10, top: 0, bottom: 0),
+            padding: EdgeInsets.symmetric(horizontal: 10),
           ),
           searchBarPadding: EdgeInsets.symmetric(horizontal: 15),
           hintText: "Bir ürün adı girin...",
           hintStyle: TextStyle(fontSize: 14),
           onSearch: _productRepository.getSearchedProducts,
           searchBarController: null,
-          placeHolder: Center(child: Text("placeholder")),
+          // placeHolder: Center(child: Text("placeholder")),
           cancellationWidget: Icon(Icons.clear),
-          emptyWidget: Text("empty"),
+          emptyWidget: Center(child: Text("Ürün bulunamadı")),
           onCancelled: () {
             print("Cancelled triggered");
           },

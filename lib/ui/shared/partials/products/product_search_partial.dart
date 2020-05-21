@@ -20,8 +20,7 @@ class ProductSearchPartial extends StatelessWidget {
     return Container(
       decoration: AppBoxDecoration().defaultCardDecoration,
       child: ListTile(
-        leading: Image.network(model.productImages[0].imagePath),
-        // leading: ProductImageWidget(model.productImages[0].imagePath),
+        leading: ProductImageWidget(model.productImages[0].imagePath),
         title: Container(
           // height: 80,
           padding: EdgeInsets.symmetric(vertical: 15),

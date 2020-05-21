@@ -1,5 +1,5 @@
 class API_URL {
-  static const _baseUrl = "http://192.168.1.105:5000";
+  static const _baseUrl = "http://192.168.1.103:5000";
 
   static const BASE_IMAGE_URL = _baseUrl;
   static const SLIDERS = "$_baseUrl/sliders";

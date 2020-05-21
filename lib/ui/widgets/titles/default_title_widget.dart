@@ -7,7 +7,7 @@ class DefaultTitleWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Text(_title, style: TextStyle(fontWeight: AppFontWeight.medium, fontSize: 16)),
+      child: Text(_title, maxLines: 2, style: TextStyle(fontWeight: AppFontWeight.medium, fontSize: 16)),
     );
   }
 }
